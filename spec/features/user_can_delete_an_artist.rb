@@ -6,8 +6,9 @@ RSpec.feature "User can delete a current artist" do
     artist2 = create(:artist)
 
     visit "/artists/#{artist1.id}"
-    click_on "Delete"
+    click_on "delete"
 
     expect(page).to have_content("Name 2")
+    expect(page).to_not have_content("Name 1")
   end
 end
