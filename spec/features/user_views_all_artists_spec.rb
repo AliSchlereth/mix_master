@@ -7,8 +7,8 @@ RSpec.feature "User views all artists" do
 
     visit '/artists'
 
-    expect(page).to have_content("Name 2")
-    expect(page).to have_content("Name 3")
+    expect(page).to have_content(artist1.name)
+    expect(page).to have_content(artist2.name)
   end
 end
 
