@@ -20,7 +20,7 @@ FactoryGirl.define do
   factory :playlist do
     sequence :name do |n|
       "Playlist #{n}"
-    song 
+    end 
   end
 
 end
