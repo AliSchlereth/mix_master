@@ -23,11 +23,12 @@ RSpec.feature "User edits a playlist" do
       visit edit_playlist_path(playlist)
       fill_in "playlist_name", with: playlist.name
       check "song-#{song2.id}"
+      check "song-#{song1.id}"
       click_on "Update Playlist"
 
       expect(page).to have_content playlist.name
       expect(page).to have_content song2.title
-
+      expect(page).to have_content song1.title
     end
   end
 end
